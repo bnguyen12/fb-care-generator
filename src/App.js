@@ -1,9 +1,10 @@
 import React from 'react';
+import Menubar from './components/Menubar'
 
 function App() {
   return (
     <div className="App">
-      <p>hey</p>
+      <Menubar />
     </div>
   );
 }
