@@ -2,11 +2,14 @@ import React, {useState} from 'react';
 import { Button, Form, FormGroup, Input, Spinner, Container, Row, Col } from 'reactstrap';
 
 const UploadBar = (props) => {
+    const [imageSource, setImageSource] = useState('');
+    const [imageUploaded, setImageUploaded] = useState(false); 
     const [image, setImage] = useState('');
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
-        console.log(image);
+        setImageUploaded(true);
+        setImage(imageSource);
     }
 
     return (
@@ -20,17 +23,13 @@ const UploadBar = (props) => {
                         <Form inline onSubmit={handleSubmit}>
                             <FormGroup>
                                 <Button>Submit</Button>
-                                <Input id="imageUpload" placeholder='Upload an image' value={image} onChange={e => setImage(e.target.value)}/>
+                                <Input placeholder='Upload an image' value={imageSource} onChange={e => setImageSource(e.target.value)}/>
                             </FormGroup>
                         </Form>
                     </Col>
                 </Row>
             </Container>
-            {/* {
-                if (imageUploaded != '') {
-                    console.log("hi")
-                }
-            } */}
+            {imageUploaded ? <img src={image} alt="imageWithCare" /> : <div></div>}
         </div>
     );
 }
