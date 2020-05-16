@@ -21,7 +21,6 @@ body {
 }
 
 #download-area {
+  display: flex;
   width: 75vw;
-  margin-left: 0;
-  margin-right: 0;
 }
