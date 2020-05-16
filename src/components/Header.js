@@ -5,10 +5,11 @@ class Header extends Component {
   render() {
     return(
       <div>
-        <Jumbotron fluid>
+        <Jumbotron fluid id="header">
           <Container fluid>
-            <h1 className="display-3">Fluid jumbotron</h1>
-            <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            <h1 className="display-5">Facebook Care Generator</h1>
+            <hr />
+            <p className="lead">Customize a care emoji to hold what you care about</p>
           </Container>
         </Jumbotron>
       </div>
