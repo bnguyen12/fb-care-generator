@@ -6,9 +6,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div id="download-area">
-        <ResultCard />
-      </div>
+      <ResultCard />
     </div>
   );
 }
