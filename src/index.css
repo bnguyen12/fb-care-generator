@@ -17,5 +17,6 @@ body {
 }
 
 #uploadBar {
+  padding-left: 45px;
   margin: 0px;
 }
