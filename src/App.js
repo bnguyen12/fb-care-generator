@@ -1,12 +1,14 @@
 import React from 'react';
 import Header from './components/Header';
-import UploadBar from './components/UploadBar';
+import ResultCard from "./components/ResultCard";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <UploadBar />
+      <div id="download-area">
+        <ResultCard />
+      </div>
     </div>
   );
 }
